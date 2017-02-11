@@ -14,10 +14,10 @@ export class PostService {
     }
           
     
-    getPosts() : Observable<Post[]>{
-          return this._http.get(this._url)
-            .map(res =>res.json());
-    }
+    // getPosts() : Observable<Post[]>{
+    //       return this._http.get(this._url)
+    //         .map(res =>res.json());
+    // }
     createPost(post:Post) {
         return this._http.post(this._url, JSON.stringify(post))
         .map(res => res.json());
